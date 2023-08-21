@@ -286,8 +286,8 @@ pub use proc_macro_error_attr::proc_macro_error;
 use proc_macro2::Span;
 use quote::{quote, ToTokens};
 
-use std::cell::Cell;
 use std::panic::{catch_unwind, resume_unwind, UnwindSafe};
+use std::{cell::Cell, panic::panic_any};
 
 pub mod dummy;
 
@@ -469,7 +469,7 @@ where
 
 fn abort_now() -> ! {
     check_correctness();
-    panic!(AbortNow)
+    panic_any(AbortNow);
 }
 
 thread_local! {

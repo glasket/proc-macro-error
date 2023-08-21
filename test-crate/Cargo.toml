@@ -2,7 +2,7 @@
 name = "test-crate"
 version = "0.0.0"
 authors = ["CreepySkeleton <creepy-skeleton@yandex.ru>"]
-edition = "2018"
+edition = "2021"
 publish = false
 
 [lib]
@@ -15,5 +15,4 @@ quote = "1"
 proc-macro2 = "1"
 
 [dependencies.syn]
-version = "1"
-default-features = false
+version = "2"

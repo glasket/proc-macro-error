@@ -10,7 +10,7 @@ keywords = ["proc-macro", "error", "errors"]
 categories = ["development-tools::procedural-macro-helpers"]
 license = "MIT OR Apache-2.0"
 
-edition = "2018"
+edition = "2021"
 build = "build.rs"
 
 [badges]
@@ -22,10 +22,10 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 quote = "1"
 proc-macro2 = "1"
-proc-macro-error-attr = { path = "./proc-macro-error-attr", version = "=1.0.4"}
+proc-macro-error-attr = { path = "./proc-macro-error-attr", version = "=1.0.4" }
 
 [dependencies.syn]
-version = "1"
+version = "2"
 optional = true
 default-features = false
 
@@ -33,8 +33,8 @@ default-features = false
 test-crate = { path = "./test-crate" }
 proc-macro-hack-test = { path = "./test-crate/proc-macro-hack-test" }
 trybuild = { version = "1.0.19", features = ["diff"] }
-toml = "=0.5.2" # DO NOT BUMP
-serde_derive = "=1.0.107" # DO NOT BUMP
+toml = "0.5.2"
+serde_derive = "1.0.107"
 
 [build-dependencies]
 version_check = "0.9"
